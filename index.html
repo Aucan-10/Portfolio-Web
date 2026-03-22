@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aucan Russo - Desarrollador Frontend</title>
+    <meta
+      name="description"
+      content="Aucan Russo - Desarrollador Frontend especializado en React, TypeScript y diseño moderno. Portafolio profesional."
+    />
+    <meta name="author" content="Aucan Russo" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js"></script>
+
+    <!-- Scroll suave -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section (ORIGINAL) -->
+    <section id="hero" class="hero-section">
+      <div class="bg-decoration decoration-1"></div>
+      <div class="bg-decoration decoration-2"></div>
+
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <h1 class="hero-title">
+              Aucan <span class="hero-title-accent">Russo</span>
+            </h1>
+            <div class="hero-divider"></div>
+            <p class="hero-description">
+              Desarrollador Frontend en crecimiento, apasionado por crear
+              experiencias digitales excepcionales. Transformando ideas en
+              código, una línea a la vez.
+            </p>
+            <p class="hero-subdescription">
+              Empezando mi carrera con emoción y disposición frente a cualquier
+              idea que se encuentre. Actualmente estoy aprendiendo PHP y Hacking
+            </p>
+            <div class="hero-buttons">
+              <button
+                class="btn btn-primary"
+                onclick="document.getElementById('experience').scrollIntoView({ behavior: 'smooth' })"
+              >
+                Ver Mi Experiencia
+              </button>
+              <a href="#footer" class="btn btn-secondary">Contactar</a>
+            </div>
+          </div>
+
+          <div class="hero-image-container">
+            <div class="hero-image-wrapper">
+              <div class="image-blur-bg"></div>
+              <img src="imagen_hero.webp" alt="" class="hero-image" />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="floating-element floating-js">
+              <div class="floating-icon">
+                <img src="html_logo.png" alt="" width="100" />
+              </div>
+            </div>
+            <div class="floating-element floating-react">
+              <div class="floating-icon">
+                <img src="python_logo.webp" alt="" width="45" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section (ORIGINAL) -->
+    <section id="experience" class="experience-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            Mi Camino Como
+            <span class="section-title-accent">Desarrollador</span>
+          </h2>
+          <div class="section-divider"></div>
+          <p class="section-description">
+            Cada línea de código es un paso hacia adelante. Aquí te cuento cómo
+            he ido creciendo en este fascinante mundo del desarrollo web.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-line"></div>
+          <div id="experiences-container" class="experiences-container"></div>
+        </div>
+
+        <div class="cta-section">
+          <div class="cta-card">
+            <h3 class="cta-title">¿Tenes un proyecto en mente?</h3>
+            <p class="cta-description">
+              Siempre estoy dispuesto a nuevas ideas de trabajo
+            </p>
+            <a
+              href="https://mail.google.com/mail/u/1/#inbox?compose=CllgCJvqrnnPCSDjgccBVpNsptCgQtkKrJgqdcRHcbqpCxDcNZHRScKQPdMFtmXHTtnGQgWTqsV"
+              target="_blank"
+              class="btn btn-cta"
+              >Contactame</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🆕 Projects Section (NUEVA - CARDS) -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            Mis <span class="section-title-accent">Proyectos</span>
+          </h2>
+          <div class="section-divider"></div>
+          <p class="section-description">
+            Una selección de trabajos en los que he participado. Cada proyecto
+            representa un desafío superado y algo nuevo aprendido.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Proyecto 1 -->
+          <article class="project-card hidden">
+            <div class="card-image">
+              <img src="el_palomo_transortes.jpg" alt="El Palomo" />
+            </div>
+            <div class="card-content">
+              <h3>Traansportes El Palomo</h3>
+              <p>
+                Una pagina web enfocada a una empresa Argentina de transportes
+                refrigerados y mudanzas
+              </p>
+              <div class="card-tags">
+                <span class="tag">HTML</span><span class="tag">CSS</span
+                ><span class="tag">JS</span>
+              </div>
+              <a href="#" class="card-link">Ver proyecto →</a>
+            </div>
+          </article>
+
+          <!-- Proyecto 2 -->
+          <article class="project-card hidden">
+            <div class="card-image">
+              <img src="logo_recetapp.png" alt="RecetApp" />
+            </div>
+            <div class="card-content">
+              <h3>RecetApp</h3>
+              <p>
+                Aplicación creada con el fin de registrar recetas de cocina. Con
+                sistema de busqueda, receta, dificultad, entre otras cosas
+              </p>
+              <div class="card-tags">
+                <span class="tag">Kotlin</span>
+                <span class="tag">Android Studio</span
+                ><span class="tag">Java</span>
+              </div>
+              <a href="#" class="card-link">Ver proyecto →</a>
+            </div>
+          </article>
+
+          <!-- Proyecto 3 -->
+          <article class="project-card hidden">
+            <div class="card-image">
+              <img src="nostromo_proyecto.jpeg" alt="Maqueta Nostromo" />
+            </div>
+            <div class="card-content">
+              <h3>Nostromo - Maqueta satelite</h3>
+              <p>
+                Prototipo de un satelite real realizado junto a profesionales,
+                acompañado de teoria. 'Nostromo' participo de varias
+                exposiciones y fue finalista en una de ellas.
+              </p>
+              <div class="card-tags">
+                <span class="tag">Arduino</span
+                ><span class="tag">Electronica General</span>
+              </div>
+              <a href="#" class="card-link">Ver proyecto →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer (ORIGINAL) -->
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3 class="footer-title">Aucan Russo</h3>
+            <p class="footer-description">
+              Desarrollador novato; haciendo crecer su conocimiento en diversos
+              lenguajes de programación.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://github.com/Aucan-10"
+                class="social-link"
+                aria-label="GitHub"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/auk_n10/profilecard/?igsh=ejVrMW83dWxja3Zn"
+                class="social-link"
+                aria-label="Instagram"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                  ></path>
+                  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-contact">
+            <h4 class="footer-subtitle">Contacto</h4>
+            <div class="contact-item">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                ></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <a href="mailto:aucanrusso@gmail.com" class="contact-email"
+                >aucannrusso2007@gmail.com</a
+              >
+            </div>
+            <p class="contact-description">
+              ¿Tienes un proyecto en mente? ¡Hablemos! Siempre estoy abierto a
+              nuevas oportunidades y colaboraciones.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h4 class="footer-subtitle">Enlaces Rápidos</h4>
+            <nav class="footer-nav">
+              <a href="#hero" class="footer-link">Sobre Mí</a>
+              <a href="#experience" class="footer-link">Experiencia</a>
+              <a href="#projects" class="footer-link">Proyectos</a>
+              <a href="#footer" class="footer-link">Contacto</a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-bottom-content">
+            <p class="footer-copyright">
+              © 2026 Aucan Russo. Todos los derechos reservados.
+            </p>
+            <p class="footer-made-with">
+              Desarrollando con experiencias, música y mucho café
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
