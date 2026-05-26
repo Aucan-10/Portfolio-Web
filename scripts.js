@@ -42,7 +42,7 @@ const experiences = [
     title: "Profundización",
     period: "2026",
     description:
-      "Con las bases establecidas en años anteriores, empece a rofundizar mis conocimientos en la programación, poniendolas en practica en proyectos personales",
+      "Con las bases establecidas en años anteriores, empecé a profundizar mis conocimientos en la programación, poniéndolas en práctica en proyectos personales",
     skills: [
       "Java",
       "Python",
@@ -50,7 +50,7 @@ const experiences = [
       "HTML",
       "CSS",
       "Godot Básico",
-      "Arduino y Electronica General",
+      "Arduino y Electrónica General",
       "JS",
     ],
   },
@@ -65,20 +65,20 @@ function createExperienceElement(experience, index) {
   experienceDiv.style.animationDelay = `${index * 200}ms`;
 
   experienceDiv.innerHTML = `
-      <div class="timeline-dot"></div>
-      <div class="experience-content">
-        <div class="experience-header">
-          <h3 class="experience-title">${experience.title}</h3>
-          <span class="experience-period">${experience.period}</span>
+        <div class="timeline-dot"></div>
+        <div class="experience-content">
+          <div class="experience-header">
+            <h3 class="experience-title">${experience.title}</h3>
+            <span class="experience-period">${experience.period}</span>
+          </div>
+          <p class="experience-description">${experience.description}</p>
+          <div class="skills-container">
+            ${experience.skills
+              .map((skill) => `<span class="skill-tag">${skill}</span>`)
+              .join("")}
+          </div>
         </div>
-        <p class="experience-description">${experience.description}</p>
-        <div class="skills-container">
-          ${experience.skills
-            .map((skill) => `<span class="skill-tag">${skill}</span>`)
-            .join("")}
-        </div>
-      </div>
-    `;
+      `;
   return experienceDiv;
 }
 
@@ -91,7 +91,7 @@ function renderExperiences() {
 }
 
 /* ========================================
-     🆕 ANIMACIONES PARA PROJECT CARDS (NUEVO)
+     ANIMACIONES PARA PROJECT CARDS
      ======================================== */
 function initProjectCardsAnimation() {
   const observerOptions = {
@@ -116,7 +116,7 @@ function initProjectCardsAnimation() {
 }
 
 /* ========================================
-     ANIMACIONES DE SCROLL (ORIGINAL + MEJORADO)
+     ANIMACIONES DE SCROLL
      ======================================== */
 function addScrollAnimations() {
   const observerOptions = {
@@ -169,17 +169,17 @@ function addButtonHandlers() {
       const y = e.clientY - rect.top - size / 2;
 
       ripple.style.cssText = `
-          position: absolute;
-          border-radius: 50%;
-          background: rgba(255, 255, 255, 0.6);
-          transform: scale(0);
-          animation: ripple 0.6s linear;
-          width: ${size}px;
-          height: ${size}px;
-          left: ${x}px;
-          top: ${y}px;
-          pointer-events: none;
-        `;
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+            width: ${size}px;
+            height: ${size}px;
+            left: ${x}px;
+            top: ${y}px;
+            pointer-events: none;
+          `;
 
       button.style.position = "relative";
       button.style.overflow = "hidden";
@@ -191,14 +191,44 @@ function addButtonHandlers() {
 }
 
 /* ========================================
+     MODAL POMODORO
+     ======================================== */
+function openPomodoroModal(e) {
+  e.preventDefault();
+  const modal = document.getElementById("pomodoro-modal");
+  modal.style.display = "flex";
+  document.body.style.overflow = "hidden";
+}
+
+function closePomodoroModal() {
+  const modal = document.getElementById("pomodoro-modal");
+  modal.style.display = "none";
+  document.body.style.overflow = "";
+}
+
+/* ========================================
      INICIALIZACIÓN
      ======================================== */
 function init() {
   renderExperiences();
   addScrollAnimations();
-  initProjectCardsAnimation(); // 🆕 Nueva función para las cards
+  initProjectCardsAnimation();
   addSmoothScroll();
   addButtonHandlers();
+
+  // Cerrar modal al hacer clic fuera
+  const modal = document.getElementById("pomodoro-modal");
+  if (modal) {
+    modal.addEventListener("click", function (e) {
+      if (e.target === this) closePomodoroModal();
+    });
+  }
+
+  // Cerrar modal con tecla Escape
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closePomodoroModal();
+  });
+
   console.log("🚀 Portafolio de Aucan Russo cargado correctamente");
 }
 
@@ -213,8 +243,8 @@ if (document.readyState === "loading") {
      ======================================== */
 const style = document.createElement("style");
 style.textContent = `
-    @keyframes ripple {
-      to { transform: scale(4); opacity: 0; }
-    }
-  `;
+      @keyframes ripple {
+        to { transform: scale(4); opacity: 0; }
+      }
+    `;
 document.head.appendChild(style);

@@ -49,7 +49,8 @@
             </p>
             <p class="hero-subdescription">
               Empezando mi carrera con emoción y disposición frente a cualquier
-              idea que se encuentre. Actualmente estoy aprendiendo PHP y Hacking
+              idea que se encuentre. Actualmente estoy aprendiendo PHP, UML y
+              Assembly.
             </p>
             <div class="hero-buttons">
               <button
@@ -65,17 +66,17 @@
           <div class="hero-image-container">
             <div class="hero-image-wrapper">
               <div class="image-blur-bg"></div>
-              <img src="imagen_hero.webp" alt="" class="hero-image" />
+              <img src="./assets/imagen_hero.webp" alt="" class="hero-image" />
               <div class="image-overlay"></div>
             </div>
             <div class="floating-element floating-js">
               <div class="floating-icon">
-                <img src="html_logo.png" alt="" width="100" />
+                <img src="./assets/html_logo.png" alt="" width="100" />
               </div>
             </div>
             <div class="floating-element floating-react">
               <div class="floating-icon">
-                <img src="python_logo.webp" alt="" width="45" />
+                <img src="./assets/python_logo.webp" alt="" width="45" />
               </div>
             </div>
           </div>
@@ -120,7 +121,7 @@
       </div>
     </section>
 
-    <!-- 🆕 Projects Section (NUEVA - CARDS) -->
+    <!-- Projects Section -->
     <section id="projects" class="projects-section">
       <div class="container">
         <div class="section-header">
@@ -138,12 +139,12 @@
           <!-- Proyecto 1 -->
           <article class="project-card hidden">
             <div class="card-image">
-              <img src="el_palomo_transortes.jpg" alt="El Palomo" />
+              <img src="./assets/el_palomo_transportes.jpg" alt="El Palomo" />
             </div>
             <div class="card-content">
-              <h3>Traansportes El Palomo</h3>
+              <h3>Transportes El Palomo</h3>
               <p>
-                Una pagina web enfocada a una empresa Argentina de transportes
+                Una página web enfocada a una empresa Argentina de transportes
                 refrigerados y mudanzas
               </p>
               <div class="card-tags">
@@ -157,13 +158,13 @@
           <!-- Proyecto 2 -->
           <article class="project-card hidden">
             <div class="card-image">
-              <img src="logo_recetapp.png" alt="RecetApp" />
+              <img src="./assets/logo_recetapp.png" alt="RecetApp" />
             </div>
             <div class="card-content">
               <h3>RecetApp</h3>
               <p>
                 Aplicación creada con el fin de registrar recetas de cocina. Con
-                sistema de busqueda, receta, dificultad, entre otras cosas
+                sistema de búsqueda, receta, dificultad, entre otras cosas
               </p>
               <div class="card-tags">
                 <span class="tag">Kotlin</span>
@@ -177,25 +178,141 @@
           <!-- Proyecto 3 -->
           <article class="project-card hidden">
             <div class="card-image">
-              <img src="nostromo_proyecto.jpeg" alt="Maqueta Nostromo" />
+              <img
+                src="./assets/nostromo_proyecto.jpeg"
+                alt="Maqueta Nostromo"
+              />
             </div>
             <div class="card-content">
-              <h3>Nostromo - Maqueta satelite</h3>
+              <h3>Nostromo - Maqueta satélite</h3>
               <p>
-                Prototipo de un satelite real realizado junto a profesionales,
-                acompañado de teoria. 'Nostromo' participo de varias
+                Prototipo de un satélite real realizado junto a profesionales,
+                acompañado de teoría. 'Nostromo' participó de varias
                 exposiciones y fue finalista en una de ellas.
               </p>
               <div class="card-tags">
                 <span class="tag">Arduino</span
-                ><span class="tag">Electronica General</span>
+                ><span class="tag">Electrónica General</span>
               </div>
               <a href="#" class="card-link">Ver proyecto →</a>
+            </div>
+          </article>
+
+          <!-- Proyecto 4 - Pomodoro -->
+          <article class="project-card hidden">
+            <div class="card-image">
+              <img src="./assets/pomodoro_icon.png" alt="Pomodoro App" />
+            </div>
+            <div class="card-content">
+              <h3>Pomodoro App</h3>
+              <p>
+                App basada en el sistema científico de estudio denominado
+                "Pomodoro"
+              </p>
+              <div class="card-tags">
+                <span class="tag">React Native</span>
+                <span class="tag">Expo</span>
+              </div>
+              <a href="#" class="card-link" onclick="openPomodoroModal(event)"
+                >Descargar APK →</a
+              >
+              <a
+                href="https://github.com/Aucan-10/PomodoroApp"
+                class="card-link"
+                >Ver proyecto →</a
+              >
             </div>
           </article>
         </div>
       </div>
     </section>
+
+    <!-- Modal Pomodoro -->
+    <div
+      id="pomodoro-modal"
+      style="
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        z-index: 9999;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <div
+        style="
+          background: #fff;
+          border-radius: 16px;
+          padding: 2rem;
+          max-width: 380px;
+          width: 90%;
+          position: relative;
+          text-align: center;
+          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        "
+      >
+        <button
+          onclick="closePomodoroModal()"
+          style="
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            cursor: pointer;
+            color: #6b7280;
+            line-height: 1;
+          "
+        >
+          ✕
+        </button>
+        <h3
+          style="
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+          "
+        >
+          Descargar Pomodoro App
+        </h3>
+        <p style="color: #6b7280; font-size: 0.9rem; margin-bottom: 1.5rem">
+          Escaneá el QR o hacé clic en el botón
+        </p>
+        <img
+          src="https://qr.expo.dev/eas-update?slug=exp&projectId=795ddb40-0dbd-4759-9ed8-196a95428deb&groupId=7006609f-9d75-47df-ac45-06e0c3ee642f&host=u.expo.dev"
+          alt="QR para descargar la app"
+          style="
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+          "
+        />
+        <br />
+        <a
+          href="https://expo.dev/accounts/aucan/projects/pomodoro/updates/7006609f-9d75-47df-ac45-06e0c3ee642f"
+          target="_blank"
+          style="
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+          "
+        >
+          Ir a Expo Go →
+        </a>
+      </div>
+    </div>
 
     <!-- Footer (ORIGINAL) -->
     <footer id="footer" class="footer">
@@ -267,7 +384,7 @@
                 ></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
-              <a href="mailto:aucanrusso@gmail.com" class="contact-email"
+              <a href="mailto:aucannrusso2007@gmail.com" class="contact-email"
                 >aucannrusso2007@gmail.com</a
               >
             </div>
